@@ -12,7 +12,7 @@ Browse through the list of posts below or click on one of the tags above to see 
 
 <div class="post-preview">
   <div class="post-preview-text">
-	{% if post.category contains "blog" %}
+    {% if post.category contains "blog" %}
 		<a href="{{ post.url }}">
 			<h2 class="post-title">
 				{{ post.title }}
@@ -26,7 +26,9 @@ Browse through the list of posts below or click on one of the tags above to see 
 		<p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.default_author }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
   </div>
   <div class="post-preview-image">
-        <img src="https://craigdsouza.in/img/portfolio/owd.jpg" style="width:128px;height:128px;">
+    {% if post.preview-image %}  
+        <img src="{{ post.preview-image }}" style="width:128px;height:128px;">
+    {% endif %}
   </div>
   <hr>
 	{% endif %}

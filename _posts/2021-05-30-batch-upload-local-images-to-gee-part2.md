@@ -1,20 +1,23 @@
 ---
 layout: post
 title : "how to batch upload local images to gee"
-subtitle : "IMD rainfall data"
+subtitle : "part 2 - IMD rainfall example"
 date: 2021-05-30 06:53:00
 author: "Craig Dsouza"
 header-img: "img/banner-red.png"
 comments: false
 tags: [IMD, rainfall, GEE]
 category: [blog, remote-sensing]
+preview-image: "https://craigdsouza.in/img/portfolio/owd.jpg"
 image_sliders:
   - [selector_name_of_slider]
 ---
 
-The Indian Meteorological Department (IMD) has recently [published](https://imdpune.gov.in/Clim_Pred_LRF_New/Grided_Data_Download.html) a dataset of daily gridded rainfall (0.25 deg) for the entire time period from 1901 until 2020. The [reference paper](https://imdpune.gov.in/Clim_Pred_LRF_New/ref_paper_MAUSAM.pdf) for this dataset states that rainfall records from 6995 rain gage stations were used in it's preparation. A comparison of the dataset (named IMD4) suggests that it is comparable with other gridded rainfall datasets across the country and in regions such as the Western Sahyadris it is more realistic given that a higher density of rainfall stations was used. The method used to convert station data to gridded was the Inverse Distance Weighted (IDW) approach, (Shepard, 1968) using a minimum of 1 and maximum of 4 stations within a radial distance of 1.5 deg around the gridded pixel. 
+The Indian Meteorological Department (IMD) has recently [published](https://imdpune.gov.in/Clim_Pred_LRF_New/Grided_Data_Download.html) a dataset of daily gridded rainfall (0.25 deg) for the entire time period from 1901 until 2020. The [reference paper](https://imdpune.gov.in/Clim_Pred_LRF_New/ref_paper_MAUSAM.pdf) for this dataset states that rainfall records from 6995 rain gage stations were used in it's preparation. A comparison of the dataset (named IMD4) suggests that it is comparable with other gridded rainfall datasets across the country and in regions such as the Western Sahyadris it is more realistic given that a higher density of rainfall stations was used. 
 
-Here we discuss accessing this data and publishing it on Google Earth Engine Image Collection to leverage it's utility against other remote sensing datasets.
+The method used to convert station data to gridded was the Inverse Distance Weighted (IDW) approach, (Shepard, 1968) using a minimum of 1 and maximum of 4 stations within a radial distance of 1.5 deg around the gridded pixel. 
+
+Here we discuss accessing this data and publishing it to a Google Earth Engine Image Collection to leverage it's utility against other remote sensing datasets. 
 
 |![final map layer](/img/posts/2021-05-30-how-to-batch-upload-local-images-to-gee/gee-map.PNG)|
 |---|
@@ -31,6 +34,7 @@ Table of Contents
 5. [Subprocess loop to upload images](#5-subprocess-loop-to-upload-images)
 
 # 1. Download Historical Data
+
 |![imd website](/img/posts/2021-05-30-how-to-batch-upload-local-images-to-gee/imd-website.PNG)|
 |---|
 |imd source of dataset|
@@ -42,7 +46,8 @@ C:Users\[Username]\Code\imdgrid> python IMDHistoricalGrid.py rain 2000 2001
 ```
 
 This script downloads annual grd files in the following directory structure
-- C > Users > [Username] > Data > imd > rain > 2000.grd, 2001.grd
+- C > Users > [Username] > Data > imd > rain > 2000.grd,
+- C > Users > [Username] > Data > imd > rain > 2001.grd
 
 [return to top](#table-of-contents)
 
@@ -54,7 +59,8 @@ C:Users\[Username]\Code\imdgrid> python IMDHistoricalGrid2Tif.py rain 2000 2001
 ```
 
 you are then left with annual tif files in the following directory structure
-- C > Users > [Username] > Data > imd > rain > tif > 2000.tif
+- C > Users > [Username] > Data > imd > rain > tif > 2000.tif,
+- C > Users > [Username] > Data > imd > rain > tif > 2001.tif
 
 [return to top](#table-of-contents)
 
@@ -67,7 +73,10 @@ C:Users\[Username]\Code\imdgrid> python IMDHistoricalTif2Daily.py rain 2000 2001
 
 after running this script you are left with daily files in the following directory structure.
 
-- C > Users > [Username] > Data > imd > rain > tif > 2000 > 20000101.tif,..,20001231.tif 
+- C > Users > [Username] > Data > imd > rain > tif > 2000 > 20000101.tif,
+- C > Users > [Username] > Data > imd > rain > tif > 2000 > 20000102.tif,
+- ...
+- C > Users > [Username] > Data > imd > rain > tif > 2000 > 20001231.tif 
 
 [return to top](#table-of-contents)
 
@@ -81,7 +90,7 @@ First create a Google Cloud Project Bucket and set it's permissions to public, a
 Upload all files to the GCP bucket with the following command.
 
 ```shell
-C:Users\[Username]\Code\imdgrid> gsutil -m cp *.tif gs://[bucketname]
+C:Users\[Username]\Data\imd\rain\tif> gsutil -m cp *.tif gs://[bucketname]
 ```  
 
 [return to top](#table-of-contents)
@@ -109,4 +118,4 @@ print("last image date ",ee.Date(rainfall.sort("system:time_start",false).first(
 
 [return to top](#table-of-contents)
 
-Attribution: much of the code here is inspired by [Ujaval Gandhi](https://github.com/spatialthoughts/projects/tree/master/imd) and [Qiusheng Wu](https://groups.google.com/g/google-earth-engine-developers/c/h5PZOmU_dfw/m/50MMDvOVAwAJ)
+Attribution: much of the code here is inspired by [Ujaval Gandhi](https://github.com/spatialthoughts/projects/tree/master/imd) ,[Qiusheng Wu](https://groups.google.com/g/google-earth-engine-developers/c/h5PZOmU_dfw/m/50MMDvOVAwAJ) and [Saswata Nandi](https://saswatanandi.github.io/softwares/imdlib/)
