@@ -14,11 +14,11 @@ Browse through the list of posts below or click on one of the tags above to see 
   <div class="post-preview-text">
       {% if post.category contains "blog" %}
 		<a href="{{ post.url }}">
-			<h2 class="post-title">
+			<h2 class="post-title" style="color:#404040;">
 				{{ post.title }}
 			</h2>
 			{% if post.subtitle %}
-			<h3 class="post-subtitle">
+			<h3 class="post-subtitle" style="color:#808080;">
 				{{ post.subtitle }}
 			</h3>
 			{% endif %}
