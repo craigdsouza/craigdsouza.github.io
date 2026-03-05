@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title : "how to batch upload local images to gee"
 subtitle : "part 2 - IMD rainfall example"

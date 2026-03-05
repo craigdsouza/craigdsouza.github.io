@@ -1,49 +1,26 @@
-# Site settings
-title: Tinker
-default_author: Craig Dsouza
+title: Craig Dsouza
 author: Craig Dsouza
-description: All things me, personal + professional (open data, working with data, python, scraping, gis, remote sensing)  # used in site head
-keywords: GIS, RS, Open data, ODK, web-scraping
-baseurl: "" #https://craigdsouza.github.io/
-
-# register on google analytics and replace this token
-google_analytics: UA-78353942-2
-# disque comments are broken if you send http:// along with url, this url is same as the one given on disqus
-# Deleting the value would remove it from footer.
-disqus_url:
-disqus_id:
-# register on feedburner and replace this url. Deleting the value will remove it from footer.
-feedburner_url:
-
-# footer details. Deleting the value would remove it from footer.
-github_username:  craigdsouza
-facebook_username:  craigds022
-instagram_username: time.capsuling
+description: Writing on data, place, and ideas.
 email: craigds022@gmail.com
-stackoverflow_username:
-twitter_username : dsouza_craig
-linkedin_username : craig-dsouza
-keybase_username :
-copyright_name: Craig Dsouza
-rss :
+baseurl: ""
 
-# used for portfolio on home page
+# Collections
 collections:
-  - portfolio
+  reports:
+    output: true
+    permalink: /reports/:name
+  tools:
+    output: true
+    permalink: /tools/:name
 
-# used to estimate reading time
-wpm: 150
+# Posts
+permalink: /writings/:year/:month/:day/:title
 
-# Build settings
+# Build
 markdown: kramdown
 highlighter: rouge
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-port: 8888
-permalink: /:categories/:title
+exclude: ["less", "node_modules", "Gruntfile.js", "package.json", "README.md", "Gemfile.lock"]
 
-# jekyll-paginate. for paginating blog posts.
-paginate: 5
-paginate_path: blog/page:num
-
-# gem dependencies
-plugins: [jekyll-paginate, jekyll-feed, jekyll-gist]
+# Plugins
+plugins:
+  - jekyll-feed

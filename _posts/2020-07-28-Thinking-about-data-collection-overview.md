@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title : "Thinking about data collection"
 subtitle : "an Overview"

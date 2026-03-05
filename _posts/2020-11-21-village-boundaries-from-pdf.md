@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title : "Extracting Village Boundaries from PDF"
 subtitle : "pdf to gis"

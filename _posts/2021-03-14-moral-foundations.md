@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title : "moral foundations"
 subtitle : "the quiz"

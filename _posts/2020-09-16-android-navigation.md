@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title : "Navigating around an android phone"
 subtitle : "getting familiar with touch screens"

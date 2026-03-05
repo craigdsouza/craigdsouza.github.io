@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title : "Android Concepts"
 subtitle : "understanding the basics of smart phones"
