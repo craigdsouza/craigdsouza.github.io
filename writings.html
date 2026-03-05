@@ -5,6 +5,8 @@ description: Essays, how-tos, and explorations.
 permalink: /writings
 ---
 
+{% assign placeholders = "circle,square,triangle,diamond,hexagon" | split: "," %}
+
 <div class="page-header">
   <h1>Writings</h1>
   <p>Essays, how-tos, and explorations.</p>
@@ -13,17 +15,27 @@ permalink: /writings
 {% if site.posts.size > 0 %}
 <ul class="post-list">
   {% for post in site.posts %}
+  {% assign placeholder = placeholders[forloop.index0 | modulo: 5] %}
   <li>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    <div class="post-meta">
-      {{ post.date | date: "%B %-d, %Y" }}
-      {% if post.tags and post.tags.size > 0 %}
-        &nbsp;&middot;&nbsp;
-        <span class="post-tags">
-          {% for tag in post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
-        </span>
-      {% endif %}
-    </div>
+    <a href="{{ post.url | relative_url }}" class="post-list-link">
+      <img
+        src="{% if post.image %}{{ post.image }}{% else %}{{ '/img/placeholders/' | append: placeholder | append: '.svg' | relative_url }}{% endif %}"
+        alt=""
+        class="post-thumb"
+      >
+      <div class="post-list-text">
+        <span class="post-list-title">{{ post.title }}</span>
+        <div class="post-meta">
+          {{ post.date | date: "%B %-d, %Y" }}
+          {% if post.tags and post.tags.size > 0 %}
+            &nbsp;&middot;&nbsp;
+            <span class="post-tags">
+              {% for tag in post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+            </span>
+          {% endif %}
+        </div>
+      </div>
+    </a>
   </li>
   {% endfor %}
 </ul>

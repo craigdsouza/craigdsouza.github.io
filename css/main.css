@@ -247,7 +247,6 @@ img {
 }
 
 .post-list li {
-  padding: 1.1rem 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -255,15 +254,42 @@ img {
   border-top: 1px solid var(--border);
 }
 
-.post-list a {
+.post-list-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 0;
   text-decoration: none;
   color: var(--text);
-  font-size: 1rem;
   transition: color 0.15s ease;
 }
 
-.post-list a:hover {
+.post-list-link:hover {
   color: var(--accent);
+}
+
+.post-list-link:hover .post-thumb {
+  opacity: 0.7;
+}
+
+.post-thumb {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 3px;
+  transition: opacity 0.15s ease;
+}
+
+.post-list-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.post-list-title {
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .post-meta {

@@ -10,18 +10,18 @@ permalink: /about
 
 <div class="about-body">
 
-I'm Craig Dsouza — I work at the intersection of data, open knowledge, and the natural world. I've spent time in the water sector, open data, GIS, and more recently AI-assisted research and tool-building.
+I'm Craig Dsouza — I've spent the majority of my [career](https://www.linkedin.com/in/craig-dsouza/) working as a researcher > data analyst > software developer > product manager with various non-profit organisations in India. I specialized in the analysis of geospatial data and building [software products](https://jaltol.app/) on it. 
 
-This site is a place to think out loud. I write when something feels worth sharing — a process I learned, an idea I can't shake, or a tool I've built that might be useful to someone else.
 
-I'm also interested in what it means to do good technical work in contexts where resources and institutions are fragile.
+I'm now opening a new chapter, emboldened to return to **building** , this time not software, but **agents**.
 
-If any of this resonates, I'd love to hear from you.
 
-**Email:** <a href="mailto:{{ site.email }}" class="email-link">{{ site.email }}</a>
+This site is a place to share learnings I uncover. I write when something feels worth sharing — a process I learned, an idea I can't shake, or a tool I've built that might be useful to someone else.
 
-**GitHub:** [craigdsouza](https://github.com/craigdsouza)
+If any of this resonates with you, I'd love to hear from you.<br>
 
-**LinkedIn:** [craig-dsouza](https://linkedin.com/in/craig-dsouza)
+**Email** <a href="mailto:{{ site.email }}" class="email-link">{{ site.email }}</a> | 
+[**GitHub**](https://github.com/craigdsouza) | 
+[**LinkedIn**](https://linkedin.com/in/craig-dsouza)
 
 </div>
