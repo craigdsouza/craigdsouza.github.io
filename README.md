@@ -31,16 +31,17 @@ Create a file in `_reports/` named `your-report-title.md`:
 
 ```markdown
 ---
-layout: page
+layout: default
 title: "Report title"
 date: 2026-03-05
-description: "One line summary"
+description: "One line summary shown in the listing."
+tags: [tag1, tag2]
 ---
 
 Report content here.
 ```
 
-To list reports on the `/reports` page, edit `reports.md` and add a link manually, or ask Claude Code to add an auto-list like the writings page.
+The report appears automatically on the `/reports` page, sorted newest first.
 
 ---
 
@@ -50,16 +51,17 @@ Create a file in `_tools/` named `your-tool-name.md`:
 
 ```markdown
 ---
-layout: page
+layout: default
 title: "Tool name"
-description: "What it does"
-link: https://link-to-tool-if-external
+date: 2026-03-05
+description: "One line summary shown in the listing."
+tags: [tag1, tag2]
 ---
 
 Description and usage notes.
 ```
 
-To list tools on the `/tools` page, edit `tools.md` and add a link, or ask Claude Code to wire up auto-listing.
+The tool appears automatically on the `/tools` page, sorted newest first.
 
 ---
 

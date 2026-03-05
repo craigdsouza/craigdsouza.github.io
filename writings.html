@@ -15,7 +15,8 @@ permalink: /writings
 {% if site.posts.size > 0 %}
 <ul class="post-list">
   {% for post in site.posts %}
-  {% assign placeholder = placeholders[forloop.index0 | modulo: 5] %}
+  {% assign idx = forloop.index0 | modulo: 5 %}
+  {% assign placeholder = placeholders[idx] %}
   <li>
     <a href="{{ post.url | relative_url }}" class="post-list-link">
       <img

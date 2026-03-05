@@ -1,13 +1,11 @@
 <header>
-  <div class="container">
-    <nav>
-      <a href="{{ '/' | relative_url }}" class="nav-home">{{ site.title }}</a>
-      <ul class="nav-links">
-        <li><a href="{{ '/writings' | relative_url }}"{% if page.url contains '/writings' %} class="active"{% endif %}>writings</a></li>
-        <li><a href="{{ '/reports' | relative_url }}"{% if page.url contains '/reports' %} class="active"{% endif %}>reports</a></li>
-        <li><a href="{{ '/tools' | relative_url }}"{% if page.url contains '/tools' %} class="active"{% endif %}>tools</a></li>
-        <li><a href="{{ '/about' | relative_url }}"{% if page.url contains '/about' %} class="active"{% endif %}>about</a></li>
-      </ul>
-    </nav>
-  </div>
+  <nav>
+    <a href="{{ '/' | relative_url }}" class="nav-home">{{ site.title }}</a>
+    <ul class="nav-links">
+      <li><a href="{{ '/writings' | relative_url }}"{% if page.url contains '/writings' %} class="active"{% endif %}>writings</a></li>
+      <li><a href="{{ '/reports' | relative_url }}"{% if page.url contains '/reports' %} class="active"{% endif %}>reports</a></li>
+      <li><a href="{{ '/tools' | relative_url }}"{% if page.url contains '/tools' %} class="active"{% endif %}>tools</a></li>
+      <li><a href="{{ '/about' | relative_url }}"{% if page.url contains '/about' %} class="active"{% endif %}>about</a></li>
+    </ul>
+  </nav>
 </header>
