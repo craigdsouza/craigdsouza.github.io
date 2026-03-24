@@ -4,7 +4,7 @@ layout: default
 
 <div class="home-intro">
   <h1>Craig Dsouza</h1>
-  <p>I write about technology with a focus on India</p>
+  <div class="home-note">{% capture home_note %}{% include home_note.md %}{% endcapture %}{{ home_note | markdownify }}</div>
 </div>
 
 <ul class="home-nav-list">
