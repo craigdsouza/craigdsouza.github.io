@@ -274,7 +274,7 @@ img {
   flex-shrink: 0;
   width: 120px;
   height: 80px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 3px;
   transition: opacity 0.15s ease;
 }

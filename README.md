@@ -4,6 +4,22 @@ Personal site built with Jekyll, hosted on GitHub Pages. Push to `master` → si
 
 ---
 
+## Run the site locally
+
+```bash
+bundle exec jekyll serve --livereload
+```
+
+Then open `http://localhost:4000`. The site rebuilds automatically when you save a file.
+
+First time only — install dependencies:
+
+```bash
+bundle install
+```
+
+---
+
 ## How to update things
 
 ### Add a new writing
