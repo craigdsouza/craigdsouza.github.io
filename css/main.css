@@ -48,7 +48,7 @@ body {
 
 main {
   flex: 1;
-  padding: 3rem 0 5rem;
+  padding: 0rem 0 5rem;
 }
 
 /* --- Nav --- */
@@ -190,6 +190,10 @@ hr {
   margin: 2.5rem 0;
 }
 
+hr + h2 {
+  margin-top: 1rem;
+}
+
 img {
   max-width: 100%;
   border-radius: 4px;
@@ -197,7 +201,7 @@ img {
 
 /* --- Home page --- */
 .home-intro {
-  padding: 3rem 0 2rem;
+  padding: 0rem 0 0rem;
 }
 
 .home-intro h1 {
@@ -354,12 +358,12 @@ img {
   margin: 0;
 }
 
-/* --- About page --- */
-.about-body {
+/* --- Resume page --- */
+.resume-body {
   font-size: 1.05rem;
 }
 
-.about-body .email-link {
+.resume-body .email-link {
   font-family: var(--font-ui);
   font-size: 0.9rem;
 }

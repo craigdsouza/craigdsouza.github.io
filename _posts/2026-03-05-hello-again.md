@@ -18,6 +18,6 @@ This site has been dormant for a few years. I'm bringing it back — not as an a
 
 **What I'm working with:**
 
-If something here is useful or you want to connect — my email is on the [About](/about) page.
+If something here is useful or you want to connect — my email is on the [Resume](/resume) page.
 
 More soon.
