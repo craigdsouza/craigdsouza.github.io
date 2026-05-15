@@ -218,6 +218,7 @@ img {
   color: var(--text) !important;
   font-size: 1.1rem !important;
   font-style: italic;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   border-left: 3px solid var(--accent);
   padding-left: 1rem;
