@@ -214,6 +214,15 @@ img {
   font-size: 1.05rem;
 }
 
+.offering {
+  color: var(--text) !important;
+  font-size: 1.1rem !important;
+  font-style: italic;
+  margin-bottom: 2rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+}
+
 .home-nav-list {
   list-style: none;
   padding: 0;

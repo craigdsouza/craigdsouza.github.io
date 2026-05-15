@@ -12,7 +12,7 @@ permalink: /resume
 
 **Email** <a href="mailto:{{ site.email }}" class="email-link">{{ site.email }}</a> &nbsp;·&nbsp; [**GitHub**](https://github.com/craigdsouza) &nbsp;·&nbsp; [**LinkedIn**](https://linkedin.com/in/craig-dsouza)
 
-I'm **Craig Dsouza** - Builder with experience developing and shipping open source [SaaS]((https://jaltol.app/)) products for geospatial analyses. Tried my hand at building and selling groundwater sensors. Now pivoting to physical AI - C++ & Deep Learning for embedded systems. 
+I'm **Craig Dsouza** - Builder with experience developing and shipping open source [SaaS]((https://jaltol.app/)) products for geospatial analyses. Tried my hand at building and selling groundwater sensors. Now pivoting to Business Automations and RAG with AI | Claude, OpenAI, n8n, make.com 
 
 I'm motivated by hard technological challenges that when solved improve human well-being. Technically strong software developer, high agency , strong with AI workflows. 
 
