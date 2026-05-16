@@ -34,6 +34,8 @@ One of his staff, exploring automations, builds him a Claude Connector for exact
 
 ## How It Was Built
 
+![Architecture diagram](/img/posts/2026-05-15-the-unification-of-business-data/architecture.png)
+
 ### Setting Up the MCP Connector
 
 Claude facilitates MCP Connectors. You build a Connector when you want Claude to have trustworthy, reliable access to data from an external source.
