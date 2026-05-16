@@ -223,6 +223,7 @@ img {
   margin-bottom: 2rem;
   border: 3px solid var(--accent);
   padding-left: 1rem;
+  border-radius: 8px;
 }
 
 .home-nav-list {
