@@ -3,6 +3,7 @@ layout: post
 title: "The Biggest Science Experiment Waiting to Happen"
 date: 2026-03-30
 tags: [AI, agriculture, food, polyhouse, precision-agriculture]
+image: /img/posts/2026-03-30-the-biggest-science-experiment/infographic.png
 ---
 
 > **TLDR** : For anyone curious about what AI and controlled-environment agriculture could mean for food production and farmer incomes, especially in India. This post describes a real experiment where Claude was given full control of a tomato plant's growing environment, explains the plant science behind what it managed, and asks: what if we ran this experiment at scale across hundreds of plants simultaneously? The implications for agricultural productivity and farmer livelihoods could be significant.

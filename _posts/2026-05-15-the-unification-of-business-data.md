@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "The Unification of Business Data: How AI Is Changing Small Business Operations"
+title: "The Unification of Business Data - 1: How AI Is Changing Small Business Operations"
 date: 2026-05-15
 tags: [AI, automation, small-business, MCP, Claude, business-intelligence, fintech-india]
 description: "AI is enabling a unified Business OS across fragmented SaaS tools. Here's a real example: building an MCP Connector that tracks client payments via Gmail and SQLite."
+image: /img/posts/2026-05-15-the-unification-of-business-data/architecture.png
 ---
 
 > **TLDR** : For small business owners curious about what AI can do for their operations, and for developers building those automations. This post argues that AI's biggest opportunity for small businesses isn't guidance from chat bots, it's unifying data across all the tools a business already uses so quicken the feedback loop within the company. 
