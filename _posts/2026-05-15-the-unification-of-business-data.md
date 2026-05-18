@@ -81,36 +81,43 @@ Two different parsers handle the extraction, but once the standardised string is
 
 ### Challenge 1: Getting Statement PDF Attachments Out of Gmail
 
-Getting the PDFs out of Gmail turned out to be the first real surprise. Claude Desktop already has Anthropic's Gmail Connector , it can search threads, read emails, find attachments. The MCP tool can thus use this to filter out emails from the banks. The natural assumption is that this covers everything. It doesn't.
+Getting the PDFs out of Gmail turned out to be the first real surprise. Claude Desktop already has Anthropic's Gmail Connector - it can search threads, read emails, find attachments. The natural assumption is that this covers everything. It doesn't.
 
-When you call the `get_thread` tool, **the Gmail Connector returns the email contents and an `attachment_id` but not the statement PDF itself**. 
+When you call the `get_thread` tool, **the Gmail Connector returns the email contents and an `attachment_id` but not the statement PDF itself**.
 
-> Attachment data above a few KB requires a completely separate API call - `messages.attachments.get` - and that call needs its own credentials. This must be done by the custom Bank Connector with the `attachment_id` it obtained, but this means it needs separate authentication. 
+> Attachment data above a few KB requires a completely separate API call - `messages.attachments.get` - and that call needs its own credentials. The custom Bank Connector must make that call directly, which means it needs its own Gmail authentication.
 
-The Gmail Connector's OAuth token lives inside Anthropic's process, and no third-party MCP Connector can touch it, by design.
+The Gmail Connector's OAuth token lives inside Anthropic's process, and no third-party MCP Connector can touch it, by design. So the Bank Connector handles all Gmail operations independently, searching for statement emails, fetching message metadata, and downloading PDF bytes, using its own token.
 
-**The fix is a one-time setup script in the custom Bank Connector** that walks the user through a browser OAuth consent flow and saves a local `token.json`. The custom MCP Connector uses that token to fetch PDF bytes directly from Gmail. The user ends up granting Gmail read access twice , once for Anthropic's Connector when setting up Claude Desktop, and once for the custom MCP. Two tokens, two processes, both calling Gmail independently.
+**The fix is a one-time setup script bundled with the connector.** Running `python setup.py` opens a browser, prompts the user to approve Gmail read-only access, and saves a `token.json` locally. No Google Cloud project, no credentials file to download - the OAuth client credentials are embedded in the connector itself.
 
-What's worth noting: Claude itself never handles either token. It passes `message_id` and `attachment_id` as plain text from one tool call to the next. Credentials stay inside each process. That's not a limitation of the architecture - it's exactly the right security boundary.
+The user ends up granting Gmail read access twice: once for Anthropic's Connector when setting up Claude Desktop, and once for the custom Bank Connector. Two tokens, two processes, both calling Gmail independently.
 
-### Challenge 2: Orchestrating a Multi-Step Workflow with two MCPs
+What's worth noting: Claude itself never handles either token. Credentials stay inside each process. That's not a limitation of the architecture, it's exactly the right security boundary.
 
-The second challenge was orchestration. Claude sees every tool from every connected MCP as a flat list. Nothing in that list tells it "which clients haven't paid me this month?", that requires searching Gmail first, then downloading a PDF, then parsing it, then querying the database, in a specific order, across two separate MCPs. That knowledge has to live somewhere Claude can read before the user asks anything.
+### Challenge 2: Orchestrating a Multi-Step Workflow
 
-Two mechanisms solve this together, because neither works 100% reliably on their own:
+The second challenge was orchestration. Claude sees every tool from every connected MCP as a flat list. Nothing in that list tells it "which clients haven't paid me this month?" - that requires searching Gmail first, then downloading PDFs, then parsing them, then querying the database, in a specific order. That knowledge has to live somewhere Claude can read before the user asks anything.
 
-1. **Server-level instructions** - the MCP SDK lets you pass a block of text when initialising the server, and Claude receives it at session start before the first message is sent.
-2. **An orchestration tool** whose description *is* the workflow itself. The tool runs no logic. Its entire value is the text Claude reads when deciding what to call next:
-   - Step 1: search Gmail for statement emails
-   - Step 2: present options to the user
-   - Step 3: get the thread
-   - Step 4: download the attachment
-   - Step 5: parse it
+The mechanism is **server-level instructions** - the MCP SDK lets you pass a block of text when initialising the server, and Claude receives it at session start before the first message is sent. These instructions define two distinct paths depending on the user's state:
 
-Server instructions prime Claude at startup. The orchestration tool gives it a concrete handle mid-conversation, long after session context may have shifted. You need both.
+- **First-time setup:** call `preview_sync` first, a fast Gmail search (no downloads) that returns how many new statements exist per bank and an estimated sync time. Claude presents this to the user and asks which banks to start with. Then call `sync_statements` with those banks. If the response includes `remaining > 0`, keep calling it in batches until done.
+- **Ongoing use:** just call `sync_statements` with no arguments - it picks up only new statements since the last sync.
+
+This approach encapsulates the multi-step logic inside purpose-built tools rather than leaving Claude to choreograph raw API calls in sequence. `preview_sync` exists entirely to set expectations before any downloading starts - on a first run with a year's worth of statements across three banks, kicking off a blind sync and waiting could take several minutes with no feedback. Showing counts and time estimates upfront lets the user make an informed choice about what to sync first.
+
+> The subtler problem: Claude Desktop times out tool calls at roughly 60 seconds. SBI savings PDFs take ~8 seconds each to parse. A naive "sync everything" call on a fresh install would hit that limit long before finishing. Batching to five statements per call, with Claude looping on the `remaining` counter, keeps every individual tool call well within the timeout.
+
+Server instructions prime Claude at startup. The tool descriptions reinforce the workflow mid-conversation, long after session context may have shifted. You need both.
 
 ### Challenge 3 - Latency
-If the above workflow ran every time the user questioned Claude, the response time would be on the order of ~30s per query. Too long for simple queries. Instead, **the final workflow included a scheduled fetch -> parse -> store in SQLite run of the Bank Connector every day** to check for new bank statements or transactions. This frequency could be adjusted as required. Once the data is in the database a query could take as little as 2-5s to run. 
+If the sync workflow ran every time the user asked a question, response time would be on the order of 30s or more per query. Too long for anything conversational. The solution is to decouple sync from query.
+
+**Once statements are parsed and stored in SQLite, all queries run against the local database** - no Gmail, no PDF parsing, just a SQL query. Response time drops to 2-5 seconds.
+
+Sync runs separately, on demand. The user says "sync my statements" roughly once a month, Claude picks up only new PDFs since the last run and adds them to the database. Everything already synced is skipped. From that point until the next sync, all queries are instant.
+
+A natural next step is automating the monthly sync on a schedule - Windows Task Scheduler or a cron job - so the database stays current without the user having to think about it. That isn't wired up in the current version, but the sync function is designed to be called that way: it's stateless, idempotent, and returns a structured summary that can be logged.
 
 ![Architecture diagram](/img/posts/2026-05-15-the-unification-of-business-data/architecture.png)
 <p style="text-align: center; font-size: 0.85em; color: #888;">Architecture of the Bank Connector MCP</p>
