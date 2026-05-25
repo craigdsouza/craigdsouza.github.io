@@ -174,7 +174,7 @@ pre {
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 1.25rem;
-  overflow: hidden;
+  overflow-x: auto;
   margin-bottom: 1.5rem;
 }
 
@@ -339,6 +339,7 @@ img {
 /* --- Post page --- */
 .post-header {
   margin-bottom: 2.5rem;
+  padding-top: 1.25rem;
 }
 
 .post-header h1 {
