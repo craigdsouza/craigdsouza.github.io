@@ -10,15 +10,22 @@ permalink: /resume
 
 <div class="resume-body" markdown="1">
 
-**Email** <a href="mailto:{{ site.email }}" class="email-link">{{ site.email }}</a> &nbsp;·&nbsp; [**GitHub**](https://github.com/craigdsouza) &nbsp;·&nbsp; [**LinkedIn**](https://linkedin.com/in/craig-dsouza)
+[**Appointments Calendar**](https://calendar.app.google/L3LukQWYDvWBGLmUA)&nbsp;·&nbsp; [**GitHub**](https://github.com/craigdsouza) &nbsp;·&nbsp; [**LinkedIn**](https://linkedin.com/in/craig-dsouza)&nbsp;·&nbsp; **Email** <a href="mailto:{{ site.email }}" class="email-link">{{ site.email }}</a> &nbsp;·&nbsp; 
 
-I'm **Craig Dsouza** - Builder with experience developing and shipping open source [SaaS]((https://jaltol.app/)) products for geospatial analyses. Tried my hand at building and selling groundwater sensors. Now pivoting to Business Automations and RAG with AI - Claude, OpenAI, n8n, make.com 
+I'm **Craig Dsouza** - Builder with experience developing and shipping open source [SaaS]((https://jaltol.app/)) products for geospatial analyses. Tried my hand at building and selling groundwater sensors. Now helping businesses with AI Automations - Claude, OpenAI, n8n, LangGraph and more.
 
-I'm motivated by hard technological challenges that when solved improve human well-being. Technically strong software developer, high agency , strong with AI workflows. 
+I'm motivated by business & technological challenges that when solved improve human well-being. Technically strong software developer, high agency , strong understanding of business processes & AI. 
 
 Curious, obsessed with learning and building products that matter.
 
+---
+
 ### Career Highlights
+
+**Freelance**  
+AI Automations · Jan 2026 - Current  
+Building and advising businesses on automation with AI.  
+
 
 **Water, Environment, Land and Livelihoods (WELL) Labs**  
 Product Manager · Apr 2023 - Dec 2025  
