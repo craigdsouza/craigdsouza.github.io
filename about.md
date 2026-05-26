@@ -10,9 +10,13 @@ permalink: /resume
 
 <div class="resume-body" markdown="1">
 
+![](img/resume-cover.jpg)
+
 [**Appointments Calendar**](https://calendar.app.google/L3LukQWYDvWBGLmUA)&nbsp;·&nbsp; [**GitHub**](https://github.com/craigdsouza) &nbsp;·&nbsp; [**LinkedIn**](https://linkedin.com/in/craig-dsouza)&nbsp;·&nbsp; **Email** <a href="mailto:{{ site.email }}" class="email-link">{{ site.email }}</a> &nbsp;·&nbsp; 
 
-I'm **Craig Dsouza** - Builder with experience developing and shipping open source [SaaS]((https://jaltol.app/)) products for geospatial analyses. Tried my hand at building and selling groundwater sensors. Now helping businesses with AI Automations - Claude, OpenAI, n8n, LangGraph and more.
+I'm **Craig Dsouza** - Builder with experience developing and shipping open source [SaaS]((https://jaltol.app/)) products. 
+
+Over the last 3 years, I've explored, experimented and built with every major AI tool and framework out there and I'm now helping businesses develop their AI strategy and where necessary with implementation of automations with Claude SDK, OpenAI SDK, LangGraph, n8n, Zapier and more.
 
 I'm motivated by business & technological challenges that when solved improve human well-being. Technically strong software developer, high agency , strong understanding of business processes & AI. 
 

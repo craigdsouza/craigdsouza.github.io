@@ -1,15 +1,16 @@
 ---
 published: true
 layout: post
-title: "A Framework for Automation in Business"
+title: "Before automating your business, do this..."
 date: 2026-05-25
 tags: [AI, automation, small-business, framework]
 description: ""
-# image: /img/posts/2026-05-25-a-framework-for-automation/
+image: /img/posts/2026-05-25-a-framework-for-automation/header.png
 ---
 
+![header](/img/posts/2026-05-25-a-framework-for-automation/header.png)
 
-> TLDR; Before automating anything, it's important to identify the right process to automate. This explainer provides a framework to find where your business pipeline is constricted and thus most in need of optimization and perhaps automation. Then, within that stage, you can prioritise by probable impact on cash flow first and time to impact second.
+> TLDR; Too many businesses are caught up in the hype of AI Automation. Automation can be a net negative if you don't do it right. Before automating anything, it's important to identify the right process to automate. This explainer provides a framework to find where your business pipeline is constricted and thus most in need of optimization and perhaps automation. Then, within that stage, you can prioritise by probable impact on cash flow first and time to impact second.
 
 ## Cash is King
 
@@ -47,7 +48,7 @@ A useful frame for identifying where to focus is to think of the business as a p
   |  COLLECTIONS  |           checkout drop-offs, failed payments
   +-------+-------+  Automate: cart abandonment sequences,
           |                    failed payment retry notifications,
-       payment                 checkout reminder emails/SMS
+         cash                 checkout reminder emails/SMS
           |
           v
   +---------------+  Signal:  long delivery times, stockouts,
@@ -61,7 +62,7 @@ A useful frame for identifying where to focus is to think of the business as a p
   |   SUPPORT   |             rising churn rate
   +------+------+    Automate: FAQ chatbot, ticket routing,
          |                     escalation alerts
-  retained customers
+     retention
          |
          v
         [CASH]
@@ -75,7 +76,12 @@ The practical sequence: identify which stage is constricted, then use the per-st
 
 ## Prioritising Within Each Stage
 
-Once you know which stage is constricted, the next question is which automation within that stage to build first. Two axes guide this: **probable impact on cash flow** (vertical) and **time to impact** (horizontal). Ease of implementation is a tie-breaker *within* a quadrant, not an axis.
+Once you know which stage is constricted, the next question is which automation within that stage to build first. Two axes guide this: 
+- **probable impact on cash flow** (vertical) and 
+- **time to impact** (horizontal).  
+Ease of implementation is a tie-breaker *within* a quadrant, not an axis.
+
+![](/img/posts/2026-05-25-a-framework-for-automation/prioritizing.png)
 
 Each quadrant calls for a different posture. **Short-term, high-impact** items are where to start, moving the needle on cash flow within weeks. **Long-term, high-impact** items require stable data pipelines and integrated systems; plan for them once the short-term fixes are live. **Short-term, low-impact** items are worth doing if they cost little, improving hygiene and freeing up team time. **Long-term, low-impact** items can wait; revisit only after the higher-impact quadrants are covered.
 
