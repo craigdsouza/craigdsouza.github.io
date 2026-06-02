@@ -1,17 +1,17 @@
 ---
-layout: default
+layout: project
 title: "Duolingo for Financial Planning"
 description: "An Android app that gamifies personal financial planning."
 date: 2025-10-30
 tags: [finance, gamification, Android App]
-image: /img/tools/amoneygame.png
+image: /img/projects/amoneygame.png
 ---
 
 # A Money Game - Duolingo for Financial Planning
 
 A full fledged android app - the idea was "Duolingo like gamification for financial planning". The app has a full set of features including 
 
-![amoneygame](/img/tools/amoneygame.png)
+![amoneygame](/img/projects/amoneygame.png)
 
 0) bite sized lessons to learn about money  
 1) expense creation via a one click entry, edit and delete expenses.  

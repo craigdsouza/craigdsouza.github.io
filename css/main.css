@@ -527,6 +527,11 @@ img {
   font-size: 0.82rem;
 }
 
+/* --- Project pages --- */
+.project-body > h1:first-child {
+  padding-top: 1.25rem;
+}
+
 /* --- Certifications page --- */
 .cert-section {
   margin-bottom: 2.5rem;

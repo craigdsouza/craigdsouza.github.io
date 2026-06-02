@@ -1,16 +1,16 @@
 ---
-layout: default
+layout: project
 title: "Valuation101 Claude Plugin"
 description: "A Claude plugin for learning and applying business valuation frameworks."
 date: 2026-05-02
 tags: [finance, AI, valuation, Claude Plugin]
-image: /img/tools/webpage.png
+image: /img/projects/webpage.png
 ---
 
 # How to determine the Intrinsic Value of a public company?
 A Claude plugin that helps users who aren't financially savvy a calculate the intrinsic value of a public company.
 
-![Valuation101](/img/tools/webpage.png)
+![Valuation101](/img/projects/webpage.png)
 
 **Links** - [Valuation-101](https://valuation-101.com/)
 

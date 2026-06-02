@@ -1,15 +1,15 @@
 ---
-layout: default
+layout: project
 title: "Jaltol"
 description: "A tool for water resource tracking and analysis."
 date: 2025-05-31
 tags: [water, data, open-source, Web App]
-image: /img/tools/jaltol.png
+image: /img/projects/jaltol.png
 ---
 
 # Jaltol
 
-![Jaltol](/img/tools/jaltol.png)
+![Jaltol](/img/projects/jaltol.png)
 
 A geospatial web app that leverages public satellite imagery for water resources monitoring. Developed by my team and I at WELL Labs, used by hydrologists internally at WELL and by partner organisations for monitoring their field implementation.
 
