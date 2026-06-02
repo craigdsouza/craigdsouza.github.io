@@ -6,7 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500&display=swap');
 
 /* --- Reset & Base --- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,14 +16,14 @@
 
 /* --- Variables --- */
 :root {
-  --bg:        #FAF7ED;
-  --text:      #1a1a1a;
-  --muted:     #6b6b6b;
-  --accent:    #8a4a0f;
-  --border:    #e2ddd3;
+  --bg: #FAF7ED;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --accent: #8a4a0f;
+  --border: #e2ddd3;
   --max-width: 640px;
   --font-body: 'Newsreader', Georgia, serif;
-  --font-ui:   'Inter', system-ui, sans-serif;
+  --font-ui: 'Inter', system-ui, sans-serif;
 }
 
 /* --- Layout --- */
@@ -143,15 +145,23 @@ a:hover {
   text-decoration-thickness: 2px;
 }
 
-strong { font-weight: 500; }
-em { font-style: italic; }
+strong {
+  font-weight: 500;
+}
 
-ul, ol {
+em {
+  font-style: italic;
+}
+
+ul,
+ol {
   padding-left: 1.5rem;
   margin-bottom: 1.25rem;
 }
 
-li { margin-bottom: 0.35rem; }
+li {
+  margin-bottom: 0.35rem;
+}
 
 blockquote {
   border-left: 3px solid var(--accent);
@@ -190,7 +200,7 @@ hr {
   margin: 2.5rem 0;
 }
 
-hr + h2 {
+hr+h2 {
   margin-top: 1rem;
 }
 
@@ -455,14 +465,188 @@ img {
   color: var(--border);
 }
 
+/* --- JD page --- */
+.jd-back {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  margin-bottom: 1rem;
+}
+
+.jd-meta {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+
+.jd-sep {
+  margin: 0 0.35rem;
+  color: var(--border);
+}
+
+.jd-apply-btn {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  padding: 0.3em 0.8em;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.jd-apply-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+.jd-portfolio {
+  margin-top: 2rem;
+}
+
+.jd-portfolio h2 {
+  margin-top: 0;
+}
+
+.jd-portfolio-list {
+  padding-left: 1.25rem;
+}
+
+.jd-portfolio-list li {
+  margin-bottom: 0.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+}
+
+.jd-portfolio-note {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+/* --- Certifications page --- */
+.cert-section {
+  margin-bottom: 2.5rem;
+}
+
+.cert-category {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cert-logo {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cert-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+  border-radius: 0;
+}
+
+.cert-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.cert-title {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0.2rem;
+}
+
+.cert-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.cert-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.cert-date {
+  white-space: nowrap;
+}
+
+.cert-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 800;
+  transition: opacity 0.15s ease;
+}
+
+.cert-link:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
 /* --- Responsive --- */
 @media (min-width: 1100px) {
-  :root { --max-width: 800px; }
+  :root {
+    --max-width: 800px;
+  }
 }
 
 @media (max-width: 480px) {
-  html { font-size: 17px; }
-  h1 { font-size: 1.5rem; }
-  .home-intro h1 { font-size: 1.6rem; }
-  .segment-cards { grid-template-columns: 1fr; }
+  html {
+    font-size: 17px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .home-intro h1 {
+    font-size: 1.6rem;
+  }
+
+  .segment-cards {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<article>
+  <div class="post-header">
+    <p class="jd-back"><a href="/nvidia">&larr; All roles</a></p>
+    <h1>{{ page.title }}</h1>
+    <div class="jd-meta">
+      <span>{{ page.job_id }}</span>
+      <span class="jd-sep">&middot;</span>
+      <span>{{ page.location }}</span>
+      <span class="jd-sep">&middot;</span>
+      <span>{{ page.employment_type }}</span>
+      <span class="jd-sep">&middot;</span>
+      <span>Posted {{ page.date_posted }}</span>
+    </div>
+    <a href="{{ page.apply_url }}" class="jd-apply-btn" target="_blank" rel="noopener">Apply &rarr;</a>
+  </div>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  {% if page.portfolio and page.portfolio.size > 0 %}
+  <hr>
+  <div class="jd-portfolio">
+    <h2>Portfolio Evidence</h2>
+    <ul class="jd-portfolio-list">
+      {% for item in page.portfolio %}
+      <li>
+        <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+        {% if item.note %}<span class="jd-portfolio-note">— {{ item.note }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</article>

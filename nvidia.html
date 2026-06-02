@@ -1,0 +1,40 @@
+---
+layout: default
+title: NVIDIA — Roles
+description: Job applications in progress.
+permalink: /nvidia
+sitemap: false
+---
+
+<div class="page-header">
+  <h1>NVIDIA</h1>
+  <p>Roles I'm applying to.</p>
+</div>
+
+{% if site.nvidia.size > 0 %}
+<ul class="post-list">
+  {% assign sorted_jds = site.nvidia | sort: "date_posted" | reverse %}
+  {% for jd in sorted_jds %}
+  <li>
+    <a href="{{ jd.url | relative_url }}" class="post-list-link">
+      <div class="post-list-text">
+        <span class="post-list-title">{{ jd.title }}</span>
+        <div class="post-meta">
+          {{ jd.location }}
+          &nbsp;&middot;&nbsp;
+          {{ jd.job_id }}
+          &nbsp;&middot;&nbsp;
+          Posted {{ jd.date_posted }}
+          {% if jd.portfolio and jd.portfolio.size > 0 %}
+            &nbsp;&middot;&nbsp;
+            <span class="tag">{{ jd.portfolio.size }} portfolio link{% if jd.portfolio.size != 1 %}s{% endif %}</span>
+          {% endif %}
+        </div>
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty-state">No roles yet.</p>
+{% endif %}

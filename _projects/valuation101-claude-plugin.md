@@ -3,7 +3,7 @@ layout: default
 title: "Valuation101 Claude Plugin"
 description: "A Claude plugin for learning and applying business valuation frameworks."
 date: 2026-05-02
-tags: [finance, AI, Claude, valuation]
+tags: [finance, AI, valuation, Claude Plugin]
 image: /img/tools/webpage.png
 ---
 

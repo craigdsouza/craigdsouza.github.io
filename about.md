@@ -33,7 +33,9 @@ Building and advising businesses on automation with AI.
 
 **Water, Environment, Land and Livelihoods (WELL) Labs**  
 Product Manager · Apr 2023 - Dec 2025  
-Led engineering team to build a scalable geospatial SaaS product for water security monitoring, growing it from concept to 20+ users across six organisations.
+Led engineering team to build a scalable geospatial SaaS product for water security monitoring, growing it from concept to 20+ users across six organisations.  
+
+Conceptualized, fundraised and executed a campaign to collect drone imagery for a dozen organisations spanning multiple geographies in India, for the purpose of training AI models for crop type mapping and field boundary segmentation.
 
 **Ashoka Trust for Research in Ecology and the Environment (ATREE)**  
 Data & Tech Lead · Dec 2020 - Mar 2023  

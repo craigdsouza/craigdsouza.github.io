@@ -3,7 +3,7 @@ layout: default
 title: "Jaltol"
 description: "A tool for water resource tracking and analysis."
 date: 2025-05-31
-tags: [water, data, open-source]
+tags: [water, data, open-source, Web App]
 image: /img/tools/jaltol.png
 ---
 

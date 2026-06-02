@@ -1,0 +1,89 @@
+- category: Geospatial & GIS
+  items:
+    - title: Customizing QGIS with Python
+      issuer: Spatial Thoughts
+      date: Jun 2021
+      logo: spatial-thoughts.webp
+      url: "http://changelog.qgis.org/en/qgis/certifyingorganisation/spatial-thoughts/course/qgis_customizing-qgis-with-python-online_2021-06-05-2021-06-06/print/2365/"
+    - title: Advanced QGIS
+      issuer: Spatial Thoughts
+      date: Aug 2020
+      logo: spatial-thoughts.webp
+      url: "https://changelog.qgis.org/en/qgis/certifyingorganisation/spatial-thoughts/course/qgis_advanced-qgis-online_2020-08-15-2020-08-16/print/1455/"
+
+- category: Python Programming
+  items:
+    - title: Object Oriented Programming in Python
+      issuer: DataCamp
+      date: Dec 2020
+      logo: datacamp.png
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/eb9c51d13f9441c9ec1948081af901b265c74bb0"
+    - title: Working with Dates and Times in Python
+      issuer: DataCamp
+      date: Dec 2020
+      logo: datacamp.png
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/6dd23d89ac90bdbc4c42343c090bcf21d3639de0"
+    - title: Introduction to Data Science in Python
+      issuer: DataCamp
+      date: Nov 2020
+      logo: datacamp.png
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/5d6b65a78269c5719d9a346735c0176a28dc6fd3"
+    - title: Web Scraping in Python
+      issuer: DataCamp
+      date: Sep 2020
+      logo: datacamp.png
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/50465b35da77c454dee839fd19953e12e806d22c"
+    - title: Writing Efficient Python Code
+      issuer: DataCamp
+      date: Jun 2020
+      logo: datacamp.png
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/b628c03d4516dc10e33bfcd4129779adca733cb8"
+    - title: Data Manipulation with Pandas
+      issuer: DataCamp
+      date: May 2020
+      logo: datacamp.png
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/9fcd66f579d8b772398ad112e53208307e49700d"
+    - title: Intermediate Python for Data Science
+      issuer: DataCamp
+      date: May 2019
+      logo: datacamp.png
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/1561806cdab2ca6275202ae7030e0daf120ae670"
+    - title: Introduction to Python
+      issuer: DataCamp
+      date: Apr 2017
+      logo: datacamp.png
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/e4f8d14ee553af52a9763d2239901b557f7becc3"
+
+- category: Data & Statistics
+  items:
+    - title: Introduction to SQL
+      issuer: DataCamp
+      date: Nov 2019
+      logo: datacamp.png
+      url: "https://www.datacamp.com/statement-of-accomplishment/course/c1c6231bcc627e84378d1a324569b6be2e9136aa"
+    - title: Introduction to R
+      issuer: DataCamp
+      logo: datacamp.png
+      url: "https://www.datacamp.com/completed/statement-of-accomplishment/course/295eb7b9a76267cf17b28a9efc1c9554844405c8"
+    - title: Introduction to Probability and Data
+      issuer: Coursera
+      date: Sep 2016
+      logo: coursera.png
+      url: "https://www.coursera.org/account/accomplishments/verify/GYPCMKHNTFQJ"
+    - title: Quantitative Methods
+      issuer: Coursera
+      date: Nov 2015
+      logo: coursera.png
+
+- category: Environment & Sustainability
+  items:
+    - title: "Sustainability of Food Systems: A Global Life Cycle Perspective"
+      issuer: Coursera
+      date: Aug 2013
+      logo: coursera.png
+      url: "https://www.coursera.org/course/globalfoodsystems"
+    - title: "Climate Literacy: Navigating Climate Change Conversations"
+      issuer: Coursera
+      date: Jul 2013
+      logo: coursera.png
+      url: "https://www.coursera.org/signature/certificate/BA5BFQWPVD"

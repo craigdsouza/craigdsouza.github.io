@@ -3,7 +3,7 @@ layout: default
 title: "Duolingo for Financial Planning"
 description: "An Android app that gamifies personal financial planning."
 date: 2025-10-30
-tags: [android, finance, mobile, gamification]
+tags: [finance, gamification, Android App]
 image: /img/tools/amoneygame.png
 ---
 
