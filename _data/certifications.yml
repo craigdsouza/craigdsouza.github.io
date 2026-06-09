@@ -1,3 +1,29 @@
+- category: Containerization & Virtualization
+  items:
+    - title: Containerization and Virtualization Concepts
+      issuer: DataCamp
+      date: Jun 2026
+      logo: datacamp.png
+      url: "https://www.datacamp.com/completed/statement-of-accomplishment/course/244ad468bcbe1e747d3412a2f10ccbc3cbb4f6a0"
+
+    - title: Introduction to Docker
+      issuer: DataCamp
+      date: Jun 2026
+      logo: datacamp.png
+      url: "https://www.datacamp.com/completed/statement-of-accomplishment/course/42c704e53720cec046cc0de0dbc1591dce633252"
+
+    - title: Intermediate Docker
+      issuer: DataCamp
+      date: Jun 2026
+      logo: datacamp.png
+      url: "https://www.datacamp.com/completed/statement-of-accomplishment/course/11fd299ebc6043149d829297cd9ea5dd6245a414"
+
+    - title: Introduction to Kubernetes
+      issuer: DataCamp
+      date: Jun 2026
+      logo: datacamp.png
+      url: "https://www.datacamp.com/completed/statement-of-accomplishment/course/4fd91772b6089e8f5282c4ac1b11e62198a1daec"
+
 - category: Geospatial & GIS
   items:
     - title: Customizing QGIS with Python
