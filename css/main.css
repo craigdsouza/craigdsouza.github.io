@@ -57,7 +57,7 @@ main {
 /* --- Nav --- */
 header {
   border-bottom: 1px solid var(--border);
-  padding: 1.25rem 0;
+  padding: 0rem 0;
 }
 
 nav {
@@ -65,8 +65,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0 2rem;
+  gap: 0.25rem 0.5rem;
+  padding: 0 1rem;
 }
 
 .nav-home {
@@ -83,6 +83,8 @@ nav {
   flex-wrap: wrap;
   gap: 0.4rem 1.75rem;
   list-style: none;
+  padding: 0.5rem 0.5rem;
+  margin: 0;
 }
 
 .nav-links a {
@@ -530,7 +532,7 @@ img {
 }
 
 /* --- Project pages --- */
-.project-body > h1:first-child {
+.project-body>h1:first-child {
   padding-top: 1.25rem;
 }
 
@@ -657,9 +659,12 @@ img {
     grid-template-columns: 1fr;
   }
 
+  header {
+    padding: 0rem 0rem;
+  }
+
   nav {
-    padding: 0 1rem;
-    gap: 0.4rem;
+    gap: 0.4rem 0.4rem;
   }
 
   .nav-links {
